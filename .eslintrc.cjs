@@ -8,15 +8,12 @@ module.exports = {
     "eslint:recommended",
     "@vue/typescript/recommended",
     "plugin:vue/vue3-essential",
-    "@vue/standard",
   ],
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaVersion: 2020,
   },
   rules: {
-    quotes: "off",
-    semi: ["error", "always"],
-    trailingComma: 0,
+    // 這邊可以自訂規則
   },
 };
