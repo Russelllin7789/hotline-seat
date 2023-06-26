@@ -17,14 +17,20 @@
       :space-between="20"
       :pagination="{ clickable: true }"
     >
-      <SwiperSlide v-for="intro in seatIntros" :key="intro.id" class="pb-10">
+      <SwiperSlide v-for="intro in seatIntros" :key="intro.id" class="pb-6">
         <div
-          class="m-8 mx-12 px-8 py-20 border border-solid border-white rounded-lg flex flex-col"
+          class="m-8 mx-12 px-8 py-16 border border-solid border-white rounded-lg flex flex-col bg-white"
         >
-          <div class="text-2xl text-white font-bold mb-4">
-            {{ intro.title }}
+          <div class="flex items-center justify-between">
+            <div class="w-[60px] h-[60px]">
+              <img :src="intro.iconUrl" alt="intro-icon" />
+            </div>
+            <div class="text-2xl text-black font-bold my-4">
+              {{ intro.title }}
+            </div>
           </div>
-          <div class="text-base text-white font-bold mb-4">
+
+          <div class="text-base text-black font-bold mb-4">
             {{ intro.description }}
           </div>
         </div>
@@ -46,7 +52,7 @@ import { ISeatIntro } from "../interface/ISeatIntro";
 const modules = [Pagination, Navigation];
 const seatIntros = ref<ISeatIntro[]>([
   {
-    iconUrl: "",
+    iconUrl: "https://img.icons8.com/?size=512&id=34961&format=png",
     id: "set-seats",
     title: "場佈",
     description: "在觀眾入場前排好座位，並完成場復。",
@@ -55,7 +61,7 @@ const seatIntros = ref<ISeatIntro[]>([
     iconUrl: "",
     id: "guidance",
     title: "帶位",
-    description: "儘速將觀眾引導至正確的位號。",
+    description: "儘速將觀眾引導至正確的位號，避免在走道逗留。",
   },
   {
     iconUrl: "",
