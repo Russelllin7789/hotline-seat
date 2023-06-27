@@ -8,4 +8,5 @@ export default defineConfig({
     vue(),
     eslintPlugin({ cache: false }), // 新增這行
   ],
+  base: "/hotline-seat/",
 });
