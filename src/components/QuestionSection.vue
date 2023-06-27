@@ -125,6 +125,9 @@ const handleFormSubmit = () => {
 };
 
 const handleReTest = () => {
+  userAnswer.value.QOne = "";
+  userAnswer.value.QTwo = "";
+  userAnswer.value.QThree = "";
   isResultShow.value = false;
   isFormFulfilled.value = false;
   totalScore.value = 0;
