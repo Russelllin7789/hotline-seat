@@ -11,9 +11,15 @@
             <div class="title hover:text-[#000dff]">時間</div>
             <div class="text-xl text-white font-bold">2023/07/29</div>
           </li>
-          <li>
+          <li class="mb-8">
             <div class="title hover:text-[#000dff]">地點</div>
             <div class="text-xl text-white font-bold">Zepp New Taipei</div>
+          </li>
+          <li>
+            <div class="text-xl text-white font-bold hover:text-[#000dff]">
+              #乘風破浪
+            </div>
+            <div class="text-xl text-gray font-bold">#又破又浪</div>
           </li>
         </ul>
       </div>
