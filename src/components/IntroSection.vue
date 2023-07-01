@@ -1,6 +1,6 @@
 <template>
   <div class="w-full p-4 my-16">
-    <h1 class="text-3xl text-white font-bold text-center mb-8">
+    <h1 class="text-[2.7rem] leading-[1] text-white font-bold text-center mb-8">
       熱線募款感恩會
     </h1>
     <div class="flex items-center justify-center">
