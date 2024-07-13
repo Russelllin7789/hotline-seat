@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "swiper": "^9.4.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue3-marquee": "^4.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.60.0",

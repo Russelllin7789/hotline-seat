@@ -6,12 +6,12 @@
       <div class="w-[60px] h-[60px]">
         <img :src="intro.iconUrl" alt="intro-icon" />
       </div>
-      <div class="text-2xl text-black font-bold my-4">
+      <div class="text-4xl text-black font-bold my-4">
         {{ intro.title }}
       </div>
     </div>
 
-    <div class="text-base text-black font-bold mb-4">
+    <div class="text-2xl text-black font-bold mb-4">
       {{ intro.description }}
     </div>
   </div>
