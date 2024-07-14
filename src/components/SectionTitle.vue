@@ -8,7 +8,9 @@
         <img :src="Wave" alt="wave-icon" />
       </div>
     </div>
-    <h2 class="title hover:text-[#000dff] mx-4 z-10">{{ sectionTitle }}</h2>
+    <h2 class="title text-gradient drop-shadow-xl mx-4 z-10">
+      {{ sectionTitle }}
+    </h2>
     <div class="w-[30vw] max-w-[200px] wave-reverse relative">
       <img :src="Wave" alt="wave-icon" class="-scale-x-100" />
       <div

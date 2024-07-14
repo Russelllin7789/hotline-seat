@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20 flex flex-col items-center">
+  <div class="pt-10 pb-20 flex flex-col items-center">
     <SectionTitle section-title="分類帽" />
     <div v-if="!isResultShow" class="flex w-full flex-col items-center">
       <div
@@ -60,7 +60,7 @@ const questions = ref<IQuestionDetail[]>([
     id: "Q2",
     question: "下列哪一個活動最能讓自己放鬆？",
     optionA: "好友相聚",
-    optionB: "酒吧破浪",
+    optionB: "鑑往知來",
     optionC: "冥想靜坐",
   },
   {
@@ -68,7 +68,7 @@ const questions = ref<IQuestionDetail[]>([
     id: "Q3",
     question: "最可能把下列哪一個當午餐？",
     optionA: "少油鹽健康餐",
-    optionB: "超商折扣品項",
+    optionB: "超商友善食光",
     optionC: "泰式酸辣河粉",
   },
 ]);

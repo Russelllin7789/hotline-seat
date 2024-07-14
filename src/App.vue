@@ -5,7 +5,7 @@ import QuestionSection from "./components/QuestionSection.vue";
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-full bg-gradient">
     <div
       class="fixed bottom-20 left-[200px] w-[100px] h-[100px] cursor-pointer animate-bounce"
     >
@@ -17,7 +17,9 @@ import QuestionSection from "./components/QuestionSection.vue";
     </div>
     <div class="w-full bg-black fixed bottom-0 py-2 z-[999]">
       <Vue3Marquee>
-        <p class="text-2xl">內場組需要你／妳！內場組是初心者の首選！</p>
+        <p class="text-2xl text-white">
+          內場組需要你／妳！零經驗可，初心者の首選！
+        </p>
       </Vue3Marquee>
     </div>
     <IntroSection />

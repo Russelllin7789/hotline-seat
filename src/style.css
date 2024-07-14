@@ -68,7 +68,7 @@ button:focus-visible {
 }
 
 .title {
-  font-size: 1.875rem /* 30px */;
+  font-size: 3rem /* 30px */;
   line-height: 2.25rem /* 36px */;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
