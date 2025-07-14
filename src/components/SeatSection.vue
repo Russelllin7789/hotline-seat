@@ -1,18 +1,36 @@
 <template>
-  <div class="my-16">
-    <SectionTitle section-title="內場組" />
-    <Swiper
-      class="flex w-full md:w-[60vw] md:max-w-[800px]"
-      navigation
-      :modules="modules"
-      :slides-per-view="1"
-      :space-between="20"
-      :pagination="{ clickable: true }"
-    >
-      <SwiperSlide v-for="intro in seatIntros" :key="intro.id" class="pb-6">
-        <SeatDetail :intro="intro" />
-      </SwiperSlide>
-    </Swiper>
+  <div class="w-full px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <SectionTitle section-title="內場組" />
+      <div class="flex justify-center mt-8">
+        <Swiper
+          class="w-full max-w-4xl"
+          navigation
+          :modules="modules"
+          :slides-per-view="1"
+          :space-between="20"
+          :pagination="{ clickable: true }"
+          :breakpoints="{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+          }"
+        >
+          <SwiperSlide v-for="intro in seatIntros" :key="intro.id" class="pb-12">
+            <SeatDetail :intro="intro" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </div>
   </div>
 </template>
 

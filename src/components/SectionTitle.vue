@@ -1,69 +1,78 @@
 <template>
-  <section class="flex items-center justify-center">
-    <div class="w-[30vw] max-w-[200px] wave relative">
-      <img :src="Wave" alt="wave-icon" />
+  <section class="flex items-center justify-center px-4 py-8">
+    <div class="w-[15vw] sm:w-[20vw] md:w-[25vw] max-w-[80px] sm:max-w-[100px] md:max-w-[120px] heart-left relative">
+      <img :src="Heart" alt="heart-icon" class="w-full h-auto" />
       <div
-        class="w-[30vw] max-w-[250px] absolute bottom-2 left-[30px] opacity-50"
+        class="w-[12vw] sm:w-[16vw] md:w-[20vw] max-w-[60px] sm:max-w-[80px] md:max-w-[100px] absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 opacity-60"
       >
-        <img :src="Wave" alt="wave-icon" />
+        <img :src="Heart" alt="heart-icon" class="w-full h-auto" />
       </div>
     </div>
-    <h2 class="title text-gradient drop-shadow-xl mx-4 z-10">
+    <h2
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gradient drop-shadow-xl mx-4 sm:mx-6 md:mx-8 z-10 font-mantou text-center"
+    >
       {{ sectionTitle }}
     </h2>
-    <div class="w-[30vw] max-w-[200px] wave-reverse relative">
-      <img :src="Wave" alt="wave-icon" class="-scale-x-100" />
+    <div class="w-[15vw] sm:w-[20vw] md:w-[25vw] max-w-[80px] sm:max-w-[100px] md:max-w-[120px] heart-right relative">
+      <img :src="Heart" alt="heart-icon" class="w-full h-auto" />
       <div
-        class="w-[30vw] max-w-[250px] absolute bottom-2 right-[30px] opacity-50"
+        class="w-[12vw] sm:w-[16vw] md:w-[20vw] max-w-[60px] sm:max-w-[80px] md:max-w-[100px] absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 opacity-60"
       >
-        <img :src="Wave" alt="wave-icon" class="-scale-x-100" />
+        <img :src="Heart" alt="heart-icon" class="w-full h-auto" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import Wave from "../assets/wave.svg";
+import Heart from "../assets/heart.svg";
 
 defineProps<{ sectionTitle: string }>();
 </script>
 
 <style scoped>
-.wave {
-  animation-name: wavy;
+.heart-left {
+  animation-name: heartbeat-left;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
 }
 
-.wave-reverse {
-  animation-name: reverse;
+.heart-right {
+  animation-name: heartbeat-right;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
 }
 
-@keyframes wavy {
-  0% {
-    transform: translateX(0);
+@keyframes heartbeat-left {
+  0%, 100% {
+    transform: scale(1) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-8deg);
   }
   50% {
-    transform: translateX(-5%);
+    transform: scale(1.05) rotate(-3deg);
   }
-  100% {
-    transform: translateX(-10%);
+  75% {
+    transform: scale(1.15) rotate(-10deg);
   }
 }
 
-@keyframes reverse {
-  0% {
-    transform: translateX(0);
+@keyframes heartbeat-right {
+  0%, 100% {
+    transform: scale(1) rotate(5deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(8deg);
   }
   50% {
-    transform: translateX(5%);
+    transform: scale(1.05) rotate(3deg);
   }
-  100% {
-    transform: translateX(10%);
+  75% {
+    transform: scale(1.15) rotate(10deg);
   }
 }
 </style>

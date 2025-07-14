@@ -1,29 +1,32 @@
 <template>
-  <div class="pt-10 pb-20 flex flex-col items-center">
-    <SectionTitle section-title="分類帽" />
-    <div v-if="!isResultShow" class="flex w-full flex-col items-center">
-      <div
-        class="flex w-full flex-col items-center justify-center max-w-[600px] m-8 mx-12 px-8"
-      >
-        <QuestionDetail
-          v-for="question in questions"
-          :key="question.id"
-          :info="question"
-          @option-chosen="handleAnswers"
-        />
+  <div class="w-full px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <SectionTitle section-title="分類帽" />
+      
+      <div v-if="!isResultShow" class="flex w-full flex-col items-center mt-8">
+        <div class="w-full max-w-2xl space-y-6">
+          <QuestionDetail
+            v-for="question in questions"
+            :key="question.id"
+            :info="question"
+            @option-chosen="handleAnswers"
+          />
+        </div>
+        
+        <div class="mt-8 mb-4">
+          <button
+            class="px-6 py-3 text-base sm:text-lg md:text-xl bg-[#000dff] text-white disabled:text-[#c8c8c8] disabled:bg-white hover:scale-105 disabled:hover:scale-100 transition-transform duration-200 rounded-lg font-mantou"
+            :disabled="!isFormFulfilled"
+            @click="handleFormSubmit"
+          >
+            看分類結果
+          </button>
+        </div>
       </div>
-      <div>
-        <button
-          class="text-xl bg-[#000dff] text-white disabled:text-[#c8c8c8] disabled:bg-white hover:scale-110 disabled:hover:scale-100"
-          :disabled="!isFormFulfilled"
-          @click="handleFormSubmit"
-        >
-          看分類結果
-        </button>
+      
+      <div v-else class="mt-8">
+        <AnswerCard :total-score="totalScore" @test-again="handleReTest" />
       </div>
-    </div>
-    <div v-else>
-      <AnswerCard :total-score="totalScore" @test-again="handleReTest" />
     </div>
   </div>
 </template>
