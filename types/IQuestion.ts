@@ -1,4 +1,4 @@
-interface IQuestionDetail {
+export interface IQuestionDetail {
   iconUrl: string;
   id: string;
   question: string;
@@ -6,5 +6,3 @@ interface IQuestionDetail {
   optionB: string;
   optionC: string;
 }
-
-export type { IQuestionDetail };

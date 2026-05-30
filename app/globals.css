@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MANTOU";
+  src: url("/MantouSans-Regular.ttf");
+}
+
+:root {
+  --color-sky: #00aeef;
+  --color-sky-dark: #0090c8;
+  --color-cream: #f7f5f0;
+  --color-ink: #1a1a1a;
+  --color-muted: #6b7280;
+  font-family: "Noto Sans TC", MANTOU, system-ui, sans-serif;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color-ink);
+  background-color: #ffffff;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-label {
+    @apply text-sm font-semibold tracking-[0.2em] uppercase text-hotline mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight;
+  }
+
+  .section-desc {
+    @apply mt-4 text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full
+      bg-hotline text-white font-medium text-sm sm:text-base
+      hover:bg-hotline-dark transition-colors duration-300
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hotline;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full
+      border-2 border-hotline text-hotline font-medium text-sm sm:text-base
+      hover:bg-hotline hover:text-white transition-colors duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm
+      hover:shadow-md transition-shadow duration-300;
+  }
+
+  .nav-link {
+    @apply relative text-sm sm:text-base font-medium text-gray-700
+      hover:text-hotline transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute w-0 h-0.5 bottom-0 left-1/2 bg-hotline transition-all duration-300;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .protected-image {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}
