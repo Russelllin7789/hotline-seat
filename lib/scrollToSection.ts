@@ -1,10 +1,16 @@
+const HEADER_HEIGHT_MOBILE = 64;
+const HEADER_HEIGHT_DESKTOP = 72;
+const SCROLL_OFFSET = 16;
+
 export function scrollToSection(sectionId: string) {
   const element = document.getElementById(sectionId);
   if (!element) return;
 
-  const navbarHeight = window.innerWidth < 640 ? 64 : 72;
-  const elementPosition = element.offsetTop - navbarHeight - 16;
-  const startPosition = window.pageYOffset;
+  const navbarHeight =
+    window.innerWidth < 640 ? HEADER_HEIGHT_MOBILE : HEADER_HEIGHT_DESKTOP;
+  const elementTop = element.getBoundingClientRect().top + window.scrollY;
+  const elementPosition = elementTop - navbarHeight - SCROLL_OFFSET;
+  const startPosition = window.scrollY;
   const distance = elementPosition - startPosition;
   const duration = Math.min(800, Math.abs(distance) * 0.5);
   let startTime: number | null = null;

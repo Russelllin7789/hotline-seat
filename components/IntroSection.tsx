@@ -46,18 +46,17 @@ function ProtectedHeroImage({ className }: { className?: string }) {
 
 export default function IntroSection() {
   return (
-    <div className="lg:pt-[72px]">
-      {/* Hero — mobile: full dvh block (image + copy); desktop: side-by-side */}
-      <div className="relative bg-cream overflow-hidden min-h-[100dvh] lg:min-h-0 flex flex-col pt-16 pb-11 sm:pb-12 lg:pt-0 lg:pb-0">
-        <div className="section-container flex-1 flex flex-col justify-center py-4 sm:py-6 lg:py-28 min-h-0">
-          <div className="grid lg:grid-cols-2 gap-16 items-start lg:items-center">
+    <div>
+      <div className="relative bg-cream overflow-hidden pt-[var(--header-height)]">
+        <div className="section-container py-6 sm:py-8 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
             <div className="order-2 lg:order-1 shrink-0 lg:shrink">
               <p className="section-label text-xs sm:text-sm">Taiwan Tongzhi Hotline Association</p>
               <h1 className="font-mantou text-2xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-[1.15] mb-3 sm:mb-6">
                 Together
                 <br />
                 <span className="text-hotline">Stronger</span>
-                <span className="text-lg sm:text-2xl lg:text-4xl block mt-1 sm:mt-2 text-gray-700 font-sans font-bold">
+                <span className="text-lg sm:text-2xl lg:text-4xl block mt-1 sm:mt-2 text-gray-700 font-mantou font-bold">
                   2026 熱線募款感恩會
                 </span>
               </h1>

@@ -124,7 +124,7 @@ export default function QuestionSection() {
             <div className="mt-10 pt-8 border-t border-gray-100 flex justify-center">
               <button
                 type="button"
-                className="btn-primary disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-hotline"
+                className="btn-primary font-mantou disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-hotline"
                 disabled={!isFormFulfilled}
                 onClick={handleFormSubmit}
               >

@@ -7,7 +7,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen pb-12">
+    <div>
       <NavBar />
       <AnnouncementBar />
 

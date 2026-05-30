@@ -8,8 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        mantou: ["MANTOU", "Noto Sans TC", "sans-serif"],
-        sans: ["Noto Sans TC", "MANTOU", "system-ui", "sans-serif"],
+        mantou: ["MANTOU", "system-ui", "sans-serif"],
+        sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
       },
       colors: {
         hotline: {

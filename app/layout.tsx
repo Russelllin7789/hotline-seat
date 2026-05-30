@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_TC } from "next/font/google";
 import "./globals.css";
-
-const notoSansTC = Noto_Sans_TC({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto",
-});
 
 export const metadata: Metadata = {
   title: "2026 熱線募款感恩會",
@@ -22,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW" className={notoSansTC.variable}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="zh-TW">
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
